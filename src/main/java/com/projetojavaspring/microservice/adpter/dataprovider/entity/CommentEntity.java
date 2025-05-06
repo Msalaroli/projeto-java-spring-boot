@@ -1,4 +1,4 @@
-package com.projetojavaspring.microservice.entity;
+package com.projetojavaspring.microservice.adpter.dataprovider.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

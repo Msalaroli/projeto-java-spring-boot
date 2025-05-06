@@ -1,10 +1,10 @@
-package com.projetojavaspring.microservice.domain.usecase;
+package com.projetojavaspring.microservice.usecase;
 
 import com.projetojavaspring.microservice.domain.model.UserDomain;
 import com.projetojavaspring.microservice.domain.model.UserRequestDomain;
-import com.projetojavaspring.microservice.entity.UserEntity;
-import com.projetojavaspring.microservice.mapper.UserMapper;
-import com.projetojavaspring.microservice.repository.UserRepository;
+import com.projetojavaspring.microservice.adpter.dataprovider.entity.UserEntity;
+import com.projetojavaspring.microservice.adpter.dataprovider.mapper.UserMapper;
+import com.projetojavaspring.microservice.adpter.dataprovider.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -23,8 +23,8 @@ public class CreateUserUseCase {
                 .build();
 
         validateUsername(userDomain);
-        UserEntity userEntity = UserMapper.INSTANCE.toEntity(userDomain);
-        UserEntity createdUser = this.userRepository.save(userEntity);
+        UserEntity userEntity = UserMapper.INSTANCE.toEntity(userDomain); //todo: Futuramente refatorar para uma interface -> userGateway
+        UserEntity createdUser = this.userRepository.save(userEntity); //todo: Futuramente refatorar para uma interface -> userGateway
 
         return UserMapper.INSTANCE.toDomain(createdUser);
     }

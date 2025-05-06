@@ -1,7 +1,7 @@
-package com.projetojavaspring.microservice.mapper;
+package com.projetojavaspring.microservice.adpter.dataprovider.mapper;
 
 import com.projetojavaspring.microservice.domain.model.UserDomain;
-import com.projetojavaspring.microservice.entity.UserEntity;
+import com.projetojavaspring.microservice.adpter.dataprovider.entity.UserEntity;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.factory.Mappers;

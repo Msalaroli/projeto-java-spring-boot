@@ -1,4 +1,4 @@
-package com.projetojavaspring.microservice.entity;
+package com.projetojavaspring.microservice.adpter.dataprovider.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -11,24 +11,33 @@ import org.hibernate.annotations.UpdateTimestamp;
 import java.time.LocalDateTime;
 
 @Data
-@Entity
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
+@Entity
 @Builder
-@Table(name = "posts")
-public class PostEntity {
+@Table(name = "users")
+public class UserEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "user_id", nullable = false)
-    private Long userId;
+    @Column(name = "username")
+    private String username;
 
-    @Column(name = "content", nullable = false)
-    private String content;
+    @Column(name = "email")
+    private String email;
 
-    @Column(name = "image_url")
-    private String imageUrl;
+    @Column(name = "password_hash")
+    private String passwordHash;
+
+    @Column(name = "full_name")
+    private String fullName;
+
+    @Column(name = "bio")
+    private String bio;
+
+    @Column(name = "avatar_url")
+    private String avatarUrl;
 
     @CreationTimestamp
     @Column(name = "created_at", updatable = false, nullable = false)

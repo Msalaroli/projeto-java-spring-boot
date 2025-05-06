@@ -1,9 +1,9 @@
-package com.projetojavaspring.microservice.entrypoint.mapper;
+package com.projetojavaspring.microservice.adpter.entrypoint.mapper;
 
 import com.projetojavaspring.microservice.domain.model.UserDomain;
 import com.projetojavaspring.microservice.domain.model.UserRequestDomain;
-import com.projetojavaspring.microservice.entrypoint.dto.UserRequestDTO;
-import com.projetojavaspring.microservice.entrypoint.dto.UserResponseDTO;
+import com.projetojavaspring.microservice.adpter.entrypoint.dto.UserRequestDTO;
+import com.projetojavaspring.microservice.adpter.entrypoint.dto.UserResponseDTO;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 
