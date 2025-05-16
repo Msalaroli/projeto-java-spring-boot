@@ -1,10 +1,11 @@
 package com.projetojavaspring.microservice.usecase;
 
-import com.projetojavaspring.microservice.domain.model.UserDomain;
-import com.projetojavaspring.microservice.domain.model.UserRequestDomain;
 import com.projetojavaspring.microservice.adpter.dataprovider.entity.UserEntity;
 import com.projetojavaspring.microservice.adpter.dataprovider.mapper.UserMapper;
 import com.projetojavaspring.microservice.adpter.dataprovider.repository.UserRepository;
+import com.projetojavaspring.microservice.domain.exception.BusinessException;
+import com.projetojavaspring.microservice.domain.model.UserDomain;
+import com.projetojavaspring.microservice.domain.model.UserRequestDomain;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -29,9 +30,9 @@ public class CreateUserUseCase {
         return UserMapper.INSTANCE.toDomain(createdUser);
     }
 
-    private void validateUsername(UserDomain newUser){
-        if(newUser.getUsername().length()<8){
-            throw new IllegalArgumentException("Username must be at least 8 characters");
+    private void validateUsername(UserDomain newUser) {
+        if (newUser.getUsername().length() < 8) {
+            throw new BusinessException("Username must be at least 8 characters");
         }
     }
 }

@@ -1,9 +1,9 @@
 package com.projetojavaspring.microservice.adpter.entrypoint;
 
-import com.projetojavaspring.microservice.usecase.CreateUserUseCase;
 import com.projetojavaspring.microservice.adpter.entrypoint.dto.UserRequestDTO;
 import com.projetojavaspring.microservice.adpter.entrypoint.dto.UserResponseDTO;
 import com.projetojavaspring.microservice.adpter.entrypoint.mapper.UserEntrypointMapper;
+import com.projetojavaspring.microservice.usecase.CreateUserUseCase;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;
