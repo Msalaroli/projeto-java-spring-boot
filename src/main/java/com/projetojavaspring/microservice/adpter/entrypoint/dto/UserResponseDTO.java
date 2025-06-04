@@ -1,6 +1,7 @@
 package com.projetojavaspring.microservice.adpter.entrypoint.dto;
 
 import java.time.LocalDateTime;
+import java.util.Set;
 
 public record UserResponseDTO(
         Long id,
@@ -9,6 +10,7 @@ public record UserResponseDTO(
         String fullName,
         String bio,
         LocalDateTime createdAt,
-        LocalDateTime updatedAt
+        LocalDateTime updatedAt,
+        Set<PostResponseDTO> posts
 ) {}
 

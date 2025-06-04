@@ -7,7 +7,7 @@ import com.projetojavaspring.microservice.domain.model.UserRequestDomain;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 
-@Mapper(componentModel = "spring")
+@Mapper(componentModel = "spring", uses = PostEntrypointMapper.class)
 public interface UserEntrypointMapper {
     UserEntrypointMapper INSTANCE = Mappers.getMapper(UserEntrypointMapper.class);
 

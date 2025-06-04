@@ -6,13 +6,15 @@ import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.factory.Mappers;
 
-@Mapper(componentModel = "spring")
+@Mapper(componentModel = "spring", uses = PostMapper.class)
 public interface UserMapper {
     UserMapper INSTANCE = Mappers.getMapper(UserMapper.class);
 
     @Mapping(source = "password", target = "passwordHash")
     UserEntity toEntity(UserDomain domain);
 
+    @Mapping(source = "posts", target = "posts")
     UserDomain toDomain(UserEntity user);
+
 }
 
