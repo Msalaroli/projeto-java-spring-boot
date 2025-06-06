@@ -1,11 +1,11 @@
 package com.projetojavaspring.microservice.usecase;
 
-import com.projetojavaspring.microservice.adpter.dataprovider.entity.UserEntity;
-import com.projetojavaspring.microservice.adpter.dataprovider.mapper.UserMapper;
-import com.projetojavaspring.microservice.adpter.dataprovider.repository.UserRepository;
-import com.projetojavaspring.microservice.domain.exception.BusinessException;
-import com.projetojavaspring.microservice.domain.model.UserDomain;
-import com.projetojavaspring.microservice.domain.model.UserRequestDomain;
+import com.projetojavaspring.microservice.adpter.dataprovider.jpa.UserRepository;
+import com.projetojavaspring.microservice.adpter.dataprovider.jpa.entity.UserEntity;
+import com.projetojavaspring.microservice.adpter.dataprovider.jpa.mapper.UserMapper;
+import com.projetojavaspring.microservice.domain.UserDomain;
+import com.projetojavaspring.microservice.domain.UserRequestDomain;
+import com.projetojavaspring.microservice.usecase.exception.BusinessException;
 import java.util.Collections;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

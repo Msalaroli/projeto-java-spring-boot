@@ -1,8 +1,8 @@
-package com.projetojavaspring.microservice.adpter.dataprovider.mapper;
+package com.projetojavaspring.microservice.adpter.dataprovider.jpa.mapper;
 
-import com.projetojavaspring.microservice.adpter.dataprovider.entity.PostEntity;
-import com.projetojavaspring.microservice.adpter.dataprovider.entity.UserEntity;
-import com.projetojavaspring.microservice.domain.model.PostDomain;
+import com.projetojavaspring.microservice.adpter.dataprovider.jpa.entity.PostEntity;
+import com.projetojavaspring.microservice.adpter.dataprovider.jpa.entity.UserEntity;
+import com.projetojavaspring.microservice.domain.PostDomain;
 import java.util.Set;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;

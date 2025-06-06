@@ -1,7 +1,7 @@
 package com.projetojavaspring.microservice.adpter.entrypoint.interceptor;
 
 import com.projetojavaspring.microservice.adpter.entrypoint.dto.ProblemDTO;
-import com.projetojavaspring.microservice.domain.exception.BusinessException;
+import com.projetojavaspring.microservice.usecase.exception.BusinessException;
 import java.util.Collections;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

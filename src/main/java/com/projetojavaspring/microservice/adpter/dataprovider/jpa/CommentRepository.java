@@ -1,6 +1,6 @@
-package com.projetojavaspring.microservice.adpter.dataprovider.repository;
+package com.projetojavaspring.microservice.adpter.dataprovider.jpa;
 
-import com.projetojavaspring.microservice.adpter.dataprovider.entity.CommentEntity;
+import com.projetojavaspring.microservice.adpter.dataprovider.jpa.entity.CommentEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

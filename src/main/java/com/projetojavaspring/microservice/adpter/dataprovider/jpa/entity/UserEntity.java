@@ -1,4 +1,4 @@
-package com.projetojavaspring.microservice.adpter.dataprovider.entity;
+package com.projetojavaspring.microservice.adpter.dataprovider.jpa.entity;
 
 import jakarta.persistence.*;
 import java.time.LocalDateTime;

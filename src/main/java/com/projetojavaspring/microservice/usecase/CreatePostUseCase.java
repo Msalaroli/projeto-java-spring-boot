@@ -1,11 +1,11 @@
 package com.projetojavaspring.microservice.usecase;
 
-import com.projetojavaspring.microservice.adpter.dataprovider.mapper.PostMapper;
-import com.projetojavaspring.microservice.adpter.dataprovider.repository.PostRepository;
-import com.projetojavaspring.microservice.adpter.dataprovider.repository.UserRepository;
-import com.projetojavaspring.microservice.domain.exception.BusinessException;
-import com.projetojavaspring.microservice.domain.model.PostDomain;
-import com.projetojavaspring.microservice.domain.model.PostRequestDomain;
+import com.projetojavaspring.microservice.adpter.dataprovider.jpa.PostRepository;
+import com.projetojavaspring.microservice.adpter.dataprovider.jpa.UserRepository;
+import com.projetojavaspring.microservice.adpter.dataprovider.jpa.mapper.PostMapper;
+import com.projetojavaspring.microservice.domain.PostDomain;
+import com.projetojavaspring.microservice.domain.PostRequestDomain;
+import com.projetojavaspring.microservice.usecase.exception.BusinessException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -33,7 +33,9 @@ public class CreatePostUseCase {
             .orElseThrow(() -> new BusinessException("User not found"));
 
     var postEntity = PostMapper.INSTANCE.toEntity(postDomain, userEntity);
+
     postRepository.save(postEntity);
+
     return PostMapper.INSTANCE.toDomain(postEntity);
   }
 

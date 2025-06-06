@@ -1,4 +1,4 @@
-package com.projetojavaspring.microservice.domain.model;
+package com.projetojavaspring.microservice.domain;
 
 import lombok.*;
 

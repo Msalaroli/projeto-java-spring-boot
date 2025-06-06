@@ -1,9 +1,10 @@
-package com.projetojavaspring.microservice.adpter.dataprovider.entity;
+package com.projetojavaspring.microservice.adpter.dataprovider.jpa.entity;
 
 import jakarta.persistence.*;
 import java.time.LocalDateTime;
 import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 
 @Getter
 @Setter
@@ -11,23 +12,27 @@ import org.hibernate.annotations.CreationTimestamp;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "comments")
-public class CommentEntity {
-
+@Table(name = "posts")
+public class PostEntity {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
 
-  @Column(name = "post_id", nullable = false)
-  private Long postId;
-
-  @Column(name = "user_id", nullable = false)
-  private Long userId;
+  @ManyToOne
+  @JoinColumn(name = "user_id")
+  private UserEntity user;
 
   @Column(name = "content", nullable = false)
   private String content;
 
+  @Column(name = "image_url")
+  private String imageUrl;
+
   @CreationTimestamp
   @Column(name = "created_at", updatable = false, nullable = false)
   private LocalDateTime createdAt;
+
+  @UpdateTimestamp
+  @Column(name = "updated_at", nullable = false)
+  private LocalDateTime updatedAt;
 }

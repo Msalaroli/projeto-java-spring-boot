@@ -2,8 +2,8 @@ package com.projetojavaspring.microservice.adpter.entrypoint.mapper;
 
 import com.projetojavaspring.microservice.adpter.entrypoint.dto.PostRequestDTO;
 import com.projetojavaspring.microservice.adpter.entrypoint.dto.PostResponseDTO;
-import com.projetojavaspring.microservice.domain.model.PostDomain;
-import com.projetojavaspring.microservice.domain.model.PostRequestDomain;
+import com.projetojavaspring.microservice.domain.PostDomain;
+import com.projetojavaspring.microservice.domain.PostRequestDomain;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 

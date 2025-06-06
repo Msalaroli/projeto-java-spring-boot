@@ -1,4 +1,4 @@
-package com.projetojavaspring.microservice.domain.exception;
+package com.projetojavaspring.microservice.usecase.exception;
 
 import lombok.Getter;
 
