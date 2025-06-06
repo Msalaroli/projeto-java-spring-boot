@@ -8,8 +8,6 @@ import org.springframework.context.annotation.ComponentScan;
 @ComponentScan(basePackages = "com.projetojavaspring.microservice")
 class ApiJavaESpringBootApplicationTests {
 
-	@Test
-	void contextLoads() {
-	}
-
+  @Test
+  void contextLoads() {}
 }
