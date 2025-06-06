@@ -1,35 +1,33 @@
 package com.projetojavaspring.microservice.adpter.dataprovider.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import java.time.LocalDateTime;
+import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
 
-import java.time.LocalDateTime;
-
-@Data
-@Entity
+@Getter
+@Setter
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@Builder
+@Entity
 @Table(name = "comments")
 public class CommentEntity {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
 
-    @Column(name = "post_id", nullable = false)
-    private Long postId;
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Long id;
 
-    @Column(name = "user_id", nullable = false)
-    private Long userId;
+  @Column(name = "post_id", nullable = false)
+  private Long postId;
 
-    @Column(name = "content", nullable = false)
-    private String content;
+  @Column(name = "user_id", nullable = false)
+  private Long userId;
 
-    @CreationTimestamp
-    @Column(name = "created_at", updatable = false, nullable = false)
-    private LocalDateTime createdAt;
+  @Column(name = "content", nullable = false)
+  private String content;
+
+  @CreationTimestamp
+  @Column(name = "created_at", updatable = false, nullable = false)
+  private LocalDateTime createdAt;
 }

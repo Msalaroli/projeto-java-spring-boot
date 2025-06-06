@@ -13,13 +13,13 @@ import org.springframework.web.bind.annotation.*;
 @RequiredArgsConstructor
 @RequestMapping("/api/v1/posts")
 public class PostEntryPoint {
-    private final CreatePostUseCase createPostUseCase;
+  private final CreatePostUseCase createPostUseCase;
 
-    @PostMapping
-    @ResponseStatus(HttpStatus.CREATED)
-    public PostResponseDTO createPost(@RequestBody @Valid PostRequestDTO postRequestDTO){
-        var requestDomain = PostEntrypointMapper.INSTANCE.toDomain(postRequestDTO);
-        var postDomain = createPostUseCase.execute(requestDomain);
-        return PostEntrypointMapper.INSTANCE.toDTO(postDomain);
-    }
+  @PostMapping
+  @ResponseStatus(HttpStatus.CREATED)
+  public PostResponseDTO createPost(@RequestBody @Valid PostRequestDTO postRequestDTO) {
+    var requestDomain = PostEntrypointMapper.INSTANCE.toDomain(postRequestDTO);
+    var postDomain = createPostUseCase.execute(requestDomain);
+    return PostEntrypointMapper.INSTANCE.toDTO(postDomain);
+  }
 }

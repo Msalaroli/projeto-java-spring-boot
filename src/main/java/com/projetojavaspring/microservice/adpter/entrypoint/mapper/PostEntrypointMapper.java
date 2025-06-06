@@ -9,9 +9,9 @@ import org.mapstruct.factory.Mappers;
 
 @Mapper(componentModel = "spring")
 public interface PostEntrypointMapper {
-    PostEntrypointMapper INSTANCE = Mappers.getMapper(PostEntrypointMapper.class);
+  PostEntrypointMapper INSTANCE = Mappers.getMapper(PostEntrypointMapper.class);
 
-    PostRequestDomain toDomain(PostRequestDTO dto);
+  PostRequestDomain toDomain(PostRequestDTO dto);
 
-    PostResponseDTO toDTO(PostDomain domain);
+  PostResponseDTO toDTO(PostDomain domain);
 }
